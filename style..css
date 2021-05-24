@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Reggae One', cursive;
+  }
+
+  :root {
+    --hue-neutral: 210;
+    --hue-wrong: 0;
+    --hue-correct: 180;
+  }
+
+  body {
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--hue), 100%, 20%);
+    flex-direction: column;
+  }
+  .hello{
+  font-size: 100px;
+  padding-bottom: 30px;
+  color: white;
+}
+.q{
+  animation: anim 5s infinite;
+}
+
+  @keyframes anim {
+    0%{
+      opacity: 0%;
+    }
+    100%{
+      opacity: 100%;
+    }
+  }
+.u{
+    animation: anim1 8s infinite;
+}
+
+@keyframes anim1 {
+  0%{
+    opacity: 0%;
+    }
+    100%{
+      opacity: 100%;
+    }
+}
+.i{
+  animation: anim3 9s infinite;
+}
+@keyframes anim3 {
+  0%{
+    opacity: 0%;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
+.z{
+  animation:anim4 12s infinite;
+}
+@keyframes anim4 {
+  0%{
+    opacity: 0%;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
+
+  body.correct {
+    --hue: var(--hue-correct);
+  }
+
+  body.wrong {
+    --hue: var(--hue-wrong);
+  }
+
+  .container {
+    width: 800px;
+    max-width: 80%;
+    background: linear-gradient(30deg, #fff, rgb(153, 152, 152));
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+  }
+
+  .btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  .btn {
+    --hue: var(--hue-neutral);
+    border: 0px solid white;
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+    box-shadow: 0.7px 0.7px 8px rgb(146, 145, 145);
+  }
+
+  .btn-grid:hover .btn {
+    filter: blur(0.8px);
+  }
+  .btn-grid .btn:hover{
+    filter: blur(0px);
+  }
+  .btn:hover{
+    transform: scale(1.005);
+    box-shadow: 0.8px 0.8px 8.5px rgb(83, 83, 83);
+    /* transition: 0.2s; */
+  }
+
+  .btn.correct {
+    --hue: var(--hue-correct);
+    color: black;
+  }
+
+  .btn.wrong {
+    --hue: var(--hue-wrong);
+  }
+
+  .start-btn, .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hide {
+    display: none;
+  }
